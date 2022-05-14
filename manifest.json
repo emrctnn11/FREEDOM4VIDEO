@@ -1,0 +1,52 @@
+{
+    "name": "FREEDOM4VIDEO",
+    "description": "FREEDOM FOR YOUR VIDEO",
+    "manifest_version": 3,
+    "version": "0.1",
+    "background": {
+        "service_worker": "main.js"
+    },
+
+    
+
+"permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+],
+
+"icons": {
+    "16": "options/img/icon16.png",
+    "32": "options/img/icon32.png",
+    "64": "options/img/icon64.png",
+    "128": "options/img/icon128.png",
+    "256": "options/img/icon256.png",
+    "512": "options/img/icon512.png"
+},
+
+"action": {
+    "default_title": "CLICK FOR FREEDOM A VIDEO",
+    "default_icon": {
+        "16": "options/img/off/icon16.png",
+        "24": "options/img/off/icon24.png",
+        "32": "options/img/off/icon32.png",
+        "64": "options/img/off/icon64.png",
+        "128": "options/img/off/icon128.png",
+        "256": "options/img/off/icon256.png",
+        "512": "options/img/off/icon512.png"
+    }
+},
+
+
+"content_scripts": [
+    {
+        "matches": ["*://*/*"],
+        "js": ["options/all.js"],
+        "run_at": "document_start",
+        "all_frames": true
+    }
+
+
+]
+
+}
